@@ -2,6 +2,9 @@
   "name": "SoaresDeAndrade",
   "version": "1.0.0",
   "description": "Escritório de Advogacia",
+  "scripts": {
+    "start": "node app.js"
+  },
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -57,5 +60,5 @@
   "bundleDependencies": [],
 
   "private": true,
-  "main": "server.js"
+  "main": "app.js"
 }

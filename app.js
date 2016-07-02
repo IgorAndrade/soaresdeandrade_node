@@ -83,12 +83,12 @@ mongoose.connect(conf.db.url);
 
 // serve index and view partials
 app.get('/', function(req, res){
-  res.render('./index');
+  res.render('../index');
 });
 
 // redirect all others to the index (HTML5 history)
 app.get('*', function(req, res){
-  res.render('./index');
+  res.render('../index');
 });
 
 
