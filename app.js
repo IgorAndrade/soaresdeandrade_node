@@ -13,11 +13,16 @@ var errorHandler = require('errorhandler');
 var expressValidator = require("express-validator");
 var morgan = require('morgan'),
   http = require('http'),
-  load = require('express-load'),
+  load = require('express-load'), 
+  conf = require('./env/'+process.env.NODE_ENV +'/config'),
+  auth = require('./env/'+process.env.NODE_ENV +'/auth'),
+  allconf = require('./env/all/config'),
   cors = require('cors'),
   path = require('path');
   var cookieParser = require('cookie-parser');
 var app = module.exports = express();
+app.conf=conf;
+app.conf.all=allconf;
 /**
  * Configuration
  */
@@ -63,117 +68,27 @@ if (env === 'producao') {
 /**
  * Routes
  */
-
+/**
 load("models").
 then("services").into(app);
-
+*/
 /**
  * DB
  */
 var mongoose = require('mongoose');
 
-global.db = mongoose.connect(conf.db.url);
+mongoose.connect(conf.db.url);
 
-//DB  fim
-//busca User Logado
-app.get('/profile', app.isLoggedInAjax, function(req, res) {
-    res.status(200).json(req.user);
-});
 
-//Ajax Login
-app.post('/login', function(req, res, next) {
-  passport.authenticate('local-login', function(err, user, info) {
-    if (err) { 
-            return res.status(500).json(err);
-        }
-        if (user.error) {
-            return res.status(400).json({ error: user.error });
-        }else if (user==false)
-          return res.status(400).json({ error: "Login inválido" });
-        
-        req.logIn(user, function(err) {
-            if (err) {
-                return res.status(500).json(err);
-            }
-            return res.status(200).json(user);
-        });
-        
-      //  res.status(200).json(req.user);
-  })(req, res, next);
-});
-
-//Logado via redesocial
-app.post('/logadoRedeSocial', function(req, res, next) {
-  passport.authenticate('logado-redesocial', function(err, user, info) {
-    if (err) { 
-            return res.status(500).json(err);
-        }
-        if (user.error) {
-            return res.status(400).json({ error: user.error });
-        }else if (user==false)
-          return res.status(400).json({ error: "Login inválido" });
-        
-        req.logIn(user, function(err) {
-            if (err) {
-                return res.status(500).json(err);
-            }
-            return res.status(200).json(user);
-        });
-        
-       // res.status(200).json(req.user);
-  })(req, res, next);
-});
-
-//Cadastro
-app.post('/cadastrar', function(req, res, next) {
-  passport.authenticate('cadastro', function(err, user, info) {
-    if (err) { 
-            return res.status(500).json(err);
-        }
-        if (user.error) {
-            return res.status(400).json({ error: user.error });
-        }else if (user==false)
-          return res.status(400).json({ error: "Cadastro inválido" });
-        
-        req.logIn(user, function(err) {
-            if (err) {
-                return res.status(500).json(err);
-            }
-            return res.status(200).json(user);
-        });
-        
-       // res.status(200).json(req.user);
-  })(req, res, next);
-});
-
-//google
-app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
-app.get('/auth/google/callback',
-            passport.authenticate('google', {
-                    failureRedirect : '/',
-                    successRedirect : '/#/profile'
-            }));
-//facebook
-app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
-app.get('/auth/facebook/callback',
-            passport.authenticate('facebook', {
-                    failureRedirect : '/',
-                    successRedirect : '/#/profile'
-            }));
- // route for logging out
-app.get('/logout', function(req, res) {
-        req.logout();
-        res.status(200).json("Deslogado")
-});
 
 // serve index and view partials
 app.get('/', function(req, res){
-  res.render('index');
+  res.render('./index');
 });
 
 // redirect all others to the index (HTML5 history)
 app.get('*', function(req, res){
-  res.render('index');
+  res.render('./index');
 });
 
 
