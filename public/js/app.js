@@ -11,8 +11,7 @@ angular.module('app', ['ui.router','ngRoute','restangular','ngStorage','ngFileUp
 	      url: '/home',
 	      views: {
 	        'content': {
-	          templateUrl: 'views/home.html',
-	          controller: 'HomeController'
+	          templateUrl: 'views/home.html'
 	        }
 	      }
 	     

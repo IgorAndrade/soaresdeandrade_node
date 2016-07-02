@@ -1733,7 +1733,9 @@ footer .footer-bar .toTop:hover {
 		padding:0 15px !important;
 	}
 
-
+	.logo img{
+		height: 50px;
+	}
 
 /** DEMO ONLY
  **************************************************************** **/

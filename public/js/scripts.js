@@ -131,8 +131,8 @@ function _topNav() {
 				window._headHeightSmall	= 66;
 
 				jQuery('#wrapper').css({"padding-top":window._headHeight + "px"});
-				jQuery('#topHead').removeClass('fixed').addClass('fixed');
-
+				/*jQuery('#topHead').removeClass('fixed').addClass('fixed');
+*/
 				if(jQuery('#header_shadow').length > 0) {
 					jQuery('#header_shadow').css({"top":window._headHeight + "px"});
 				}
@@ -143,7 +143,7 @@ function _topNav() {
 					jQuery('#wrapper').css({"margin-top":"-30px"});
 					jQuery('#header_shadow').css({"top":"40px"});
 				} else {
-					jQuery('#wrapper').css({"margin-top":"0px"});
+					jQuery('#wrapper').css({"margin-top":"45px"});
 					jQuery('#header_shadow').css({"top":"80px"});				
 				}
 
