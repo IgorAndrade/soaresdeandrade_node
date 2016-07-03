@@ -23,7 +23,7 @@
                 sortable="'titulo'" ng-click="open(row)">{{row.titulo}}
             </td>
             <td data-title="'Data'" sortable="'data'"
-            ng-click="open(row)">{{row.data}}
+            ng-click="open(row)">{{row.data | date:'dd/MM/yyyy HH:mm'}}
             </td>
         </tr>
     </table>
