@@ -20,6 +20,7 @@ var morgan = require('morgan'),
   cors = require('cors'),
   path = require('path');
   var cookieParser = require('cookie-parser');
+var favicon = require('serve-favicon');
 var app = module.exports = express();
 app.conf=conf;
 app.conf.all=allconf;
@@ -33,7 +34,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.set('views', __dirname + '/public/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
 app.use(methodOverride());
 app.use(cookieParser());
@@ -68,10 +69,10 @@ if (env === 'producao') {
 /**
  * Routes
  */
-/**
+
 load("models").
 then("services").into(app);
-*/
+
 /**
  * DB
  */

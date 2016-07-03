@@ -1,0 +1,55 @@
+<!-- PAGE TITLE -->
+<header id="page-title">
+    <div class="container">
+        <h1>Notícia</h1>
+
+        <ul class="breadcrumb">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="noticiaLista">Noticias</a></li>
+            <li class="active">Notícia</li>
+        </ul>
+    </div>
+</header>
+
+<section class="container">
+
+    <div class="col-md-8">
+
+        <form class="white-row" >
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <label>Titulo</label>
+                        <input type="text" required class="form-control" ng-model="noticia.titulo" name="titulo" id="titulo">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <label>Data</label>
+                        <input type="text"  class="form-control" ng-model="noticia.data" name="data" id="data">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <label>Texto *</label>
+                        <textarea rows="10" class="form-control" ng-model="noticia.texto" name="texto" id="texto"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="submit" value="Salvar" class="btn btn-primary btn-lg" ng-click="save()">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</section>

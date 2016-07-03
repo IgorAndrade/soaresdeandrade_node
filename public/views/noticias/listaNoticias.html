@@ -1,0 +1,30 @@
+<!-- PAGE TITLE -->
+<header id="page-title">
+    <div class="container">
+        <h1>Notícias</h1>
+
+        <ul class="breadcrumb">
+            <li><a ui-sref="home">Home</a></li>
+            <li class="active">Notícias</li>
+        </ul>
+    </div>
+</header>
+
+<section class="container">
+    <div class="row" style="margin-bottom: 10px">
+        <div class="col-md-12">
+            <input type="button" value="Novo" class="btn btn-primary btn-md" ng-click="novo()">
+        </div>
+    </div>
+    <table ng-table="tabela"
+           class="table table-bordered table-striped table-condensed clickrow">
+        <tr ng-repeat="row in $data track by row._id">
+            <td data-title="'Titulo'" filter="{titulo: 'text'}"
+                sortable="'titulo'" ng-click="open(row)">{{row.titulo}}
+            </td>
+            <td data-title="'Data'" sortable="'data'"
+            ng-click="open(row)">{{row.data}}
+            </td>
+        </tr>
+    </table>
+</section>
