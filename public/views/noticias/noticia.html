@@ -28,7 +28,11 @@
                 <div class="form-group">
                     <div class="col-md-12">
                         <label>Data</label>
-                        <input type="text"  class="form-control" ng-model="noticia.data" name="data" id="data">
+                        <input class="form-control"
+                               ng-model="noticia.data"
+                               ng-model-options="{ updateOn: 'blur' }"
+                               placeholder="Selecione um dia..."
+                               moment-picker="noticia.data">
                     </div>
                 </div>
             </div>

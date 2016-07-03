@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on filters, and services
 
-angular.module('app', ['ui.router', 'ngRoute', 'restangular', 'ngStorage', 'ngFileUpload', 'ngTable'])
+angular.module('app', ['ui.router', 'ngRoute', 'restangular', 'ngStorage', 'ngFileUpload', 'ngTable', 'moment-picker'])
 
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
@@ -52,5 +52,29 @@ angular.module('app', ['ui.router', 'ngRoute', 'restangular', 'ngStorage', 'ngFi
             id: '_id'
         });
     })
+
+    .config(['momentPickerProvider', function (momentPickerProvider) {
+        momentPickerProvider.options({
+            /* Picker properties */
+            locale:        'pt',
+            format:        'DD/MM/YYYY',
+            minView:       'decade',
+            maxView:       'minute',
+            startView:     'day',
+            today:         true,
+
+            /* Extra: Views properties */
+            leftArrow:     '&larr;',
+            rightArrow:    '&rarr;',
+            yearsFormat:   'YYYY',
+            monthsFormat:  'MM',
+            daysFormat:    'DD',
+            hoursFormat:   'HH:[00]',
+            minutesFormat: moment.localeData().longDateFormat('LT').replace(/[aA]/, ''),
+            secondsFormat: 'ss',
+            minutesStep:   5,
+            secondsStep:   1
+        });
+    }]);
 
 

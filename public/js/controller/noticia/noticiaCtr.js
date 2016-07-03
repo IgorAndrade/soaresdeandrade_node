@@ -6,7 +6,7 @@
 angular.module("app").controller("noticiaCtr", noticiaCtr);
 
 function noticiaCtr(Restangular, $scope, $state, Tabela) {
-    $scope.noticia = {titulo: "", texto: "", data: new Date()};
+    $scope.noticia = {titulo: "", texto: "", data: ""};
     $scope.tabela = new Tabela("/noticia");
 
     if ($state.params && $state.params.noticia) {
@@ -45,5 +45,3 @@ function noticiaCtr(Restangular, $scope, $state, Tabela) {
 
 
 }
-
-
