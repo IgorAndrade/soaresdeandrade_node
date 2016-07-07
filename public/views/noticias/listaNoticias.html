@@ -22,10 +22,10 @@
             <td data-title="'Titulo'"
                 sortable="'titulo'" ng-click="open(row)">{{row.titulo}}
             </td>
-            <td data-title="'Data'" sortable="'data'"
+            <td data-title="'Data'" sortable="'data'" style="width: 100px"
                 ng-click="open(row)">{{row.data | date:'dd/MM/yyyy'}}
             </td>
-            <td data-title="' '" sortable="'data'"
+            <td data-title="'Ação'" sortable="'data'" style="width: 50px"
             ><input type="button" value="Remover" class="btn btn-primary btn-md" ng-click="remover(row)">
             </td>
         </tr>
