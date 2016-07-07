@@ -11,7 +11,23 @@ angular.module('app', ['ui.router', 'ngRoute', 'restangular', 'ngStorage', 'ngFi
                 url: '/home',
                 views: {
                     'content': {
-                        templateUrl: 'views/home.html'
+                        templateUrl: '/views/site/home.html'
+                    }
+                }
+            })
+            .state('quemSomos', {
+                url: '/quemSomos',
+                views: {
+                    'content': {
+                        templateUrl: '/views/site/quemSomos.html'
+                    }
+                }
+            })
+            .state('areaAtuacao', {
+                url: '/areaAtuacao',
+                views: {
+                    'content': {
+                        templateUrl: '/views/site/areaAtuacao.html'
                     }
                 }
             })
