@@ -19,11 +19,14 @@
     <table ng-table="tabela"
            class="table table-bordered table-striped table-condensed clickrow">
         <tr ng-repeat="row in $data track by row._id">
-            <td data-title="'Titulo'" filter="{titulo: 'text'}"
+            <td data-title="'Titulo'"
                 sortable="'titulo'" ng-click="open(row)">{{row.titulo}}
             </td>
             <td data-title="'Data'" sortable="'data'"
-            ng-click="open(row)">{{row.data | date:'dd/MM/yyyy'}}
+                ng-click="open(row)">{{row.data | date:'dd/MM/yyyy'}}
+            </td>
+            <td data-title="' '" sortable="'data'"
+            ><input type="button" value="Remover" class="btn btn-primary btn-md" ng-click="remover(row)">
             </td>
         </tr>
     </table>

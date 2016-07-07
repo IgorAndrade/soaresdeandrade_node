@@ -43,5 +43,11 @@ function noticiaCtr(Restangular, $scope, $state, Tabela) {
         $state.go("noticia",{noticia:noticia});
     }
 
+    $scope.remover = remover;
+    function remover(noticia) {
+        noticia.remove().then(function () {
+            $scope.tabela.reload();
+        });
+    }
 
 }
