@@ -7,30 +7,6 @@ angular.module('app', ['ui.router', 'ngRoute', 'restangular', 'ngStorage', 'ngFi
     .config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
         $stateProvider
-            .state('home', {
-                url: '/home',
-                views: {
-                    'content': {
-                        templateUrl: '/views/site/home.html'
-                    }
-                }
-            })
-            .state('quemSomos', {
-                url: '/quemSomos',
-                views: {
-                    'content': {
-                        templateUrl: '/views/site/quemSomos.html'
-                    }
-                }
-            })
-            .state('areaAtuacao', {
-                url: '/areaAtuacao',
-                views: {
-                    'content': {
-                        templateUrl: '/views/site/areaAtuacao.html'
-                    }
-                }
-            })
             .state('adm', {
                 url: '/adm',
                 abstract: true,
