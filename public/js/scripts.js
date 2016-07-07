@@ -125,14 +125,14 @@ function _topNav() {
 		window._headHeightSmall	= 30;
 
 		function _topNavCalibrate() {
-
+/**
 			if(jQuery("#topHead").length > 0) {
 				window._headHeight 		= jQuery("header#topHead").outerHeight() + jQuery("header#topNav").outerHeight() - 10;
 				window._headHeightSmall	= 66;
 
 				jQuery('#wrapper').css({"padding-top":window._headHeight + "px"});
-				/*jQuery('#topHead').removeClass('fixed').addClass('fixed');
-*/
+				// jQuery('#topHead').removeClass('fixed').addClass('fixed');
+
 				if(jQuery('#header_shadow').length > 0) {
 					jQuery('#header_shadow').css({"top":window._headHeight + "px"});
 				}
@@ -148,7 +148,7 @@ function _topNav() {
 				}
 
 			}
-
+*/
 		}
 
 		// recalibrate menu (mobile = slim mode) on resize

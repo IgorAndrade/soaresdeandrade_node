@@ -15,6 +15,15 @@ angular.module('app', ['ui.router', 'ngRoute', 'restangular', 'ngStorage', 'ngFi
                     }
                 }
             })
+            .state('adm', {
+                url: '/adm',
+                abstract: true,
+                views: {
+                    'menu': {
+                        templateUrl: '/views/directives/menuAdm.html'
+                    }
+                }
+            })
             .state('noticia', {
                 url: '/noticia',
                 views: {
@@ -56,24 +65,24 @@ angular.module('app', ['ui.router', 'ngRoute', 'restangular', 'ngStorage', 'ngFi
     .config(['momentPickerProvider', function (momentPickerProvider) {
         momentPickerProvider.options({
             /* Picker properties */
-            locale:        'pt',
-            format:        'DD/MM/YYYY',
-            minView:       'decade',
-            maxView:       'minute',
-            startView:     'day',
-            today:         true,
+            locale: 'pt',
+            format: 'DD/MM/YYYY',
+            minView: 'decade',
+            maxView: 'minute',
+            startView: 'day',
+            today: true,
 
             /* Extra: Views properties */
-            leftArrow:     '&larr;',
-            rightArrow:    '&rarr;',
-            yearsFormat:   'YYYY',
-            monthsFormat:  'MM',
-            daysFormat:    'DD',
-            hoursFormat:   'HH:[00]',
+            leftArrow: '&larr;',
+            rightArrow: '&rarr;',
+            yearsFormat: 'YYYY',
+            monthsFormat: 'MM',
+            daysFormat: 'DD',
+            hoursFormat: 'HH:[00]',
             minutesFormat: moment.localeData().longDateFormat('LT').replace(/[aA]/, ''),
             secondsFormat: 'ss',
-            minutesStep:   5,
-            secondsStep:   1
+            minutesStep: 5,
+            secondsStep: 1
         });
     }]);
 

@@ -17,15 +17,18 @@ module.exports = function (app) {
             });
         },
         listar: function (req, res, next) {
-            var filter = JSON.parse(req.query.filter);
-            var pg=req.query.pg;
-            var qtd=req.query.qtd;
+
+            var filter = JSON.parse(req.query.filter || "{}");
+            var pg=req.query.pg || 0;
+            pg=parseInt(pg);
+            var qtd=req.query.qtd || 5;
+            qtd=parseInt(qtd);
             if(filter && filter.titulo=="")
                 delete filter.titulo;
             //else if(filter && filter.titulo)
             //    filter.titulo="/"+filter.titulo+"/";
 
-            var sort = JSON.parse(req.query.sort);
+            var sort = JSON.parse(req.query.sort|| "{}");
             Modelo.find(filter).sort(sort).skip(pg).limit(qtd).exec(function (erro, lista,total) {
                 if (erro)
                     res.status(412).json({"error": erro});
