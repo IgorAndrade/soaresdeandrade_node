@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd52f21a-d95f-4c77-847f-2c305f268dbf" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/views/home.html" afterPath="$PROJECT_DIR$/public/views/site/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controller/noticia/noticiaCtr.js" afterPath="$PROJECT_DIR$/public/js/controller/noticia/noticiaCtr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/directives/directives.js" afterPath="$PROJECT_DIR$/public/js/directives/directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/directives/cabecalho.html" afterPath="$PROJECT_DIR$/public/views/directives/cabecalho.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/directives/menu.html" afterPath="$PROJECT_DIR$/public/views/directives/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/noticias/listaNoticias.html" afterPath="$PROJECT_DIR$/public/views/noticias/listaNoticias.html" />
     </list>
     <ignored path="soaresdeandrade.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,14 +33,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="noticiaCtr.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="noticiaCtr.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/controller/noticia/noticiaCtr.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+            <state relative-caret-position="105">
+              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,9 +103,9 @@
         <option value="$PROJECT_DIR$/public/views/site/home.html" />
         <option value="$PROJECT_DIR$/public/views/directives/rodape.html" />
         <option value="$PROJECT_DIR$/public/js/directives/directives.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/views/noticias/listaNoticias.html" />
         <option value="$PROJECT_DIR$/public/js/controller/noticia/noticiaCtr.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -469,12 +471,12 @@
       <updated>1467463536195</updated>
       <workItem from="1467463538145" duration="19540000" />
       <workItem from="1467767250430" duration="5755000" />
-      <workItem from="1467851118667" duration="7690000" />
+      <workItem from="1467851118667" duration="7898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32985000" />
+    <option name="totallyTimeSpent" value="33193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1400" height="1000" extended-state="0" />
@@ -832,14 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/noticias/listaNoticias.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -858,11 +852,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/controller/noticia/noticiaCtr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="105">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
