@@ -38,7 +38,8 @@ module.exports = function (app) {
             });
         },
         update: function (req, res, next) {
-            var obj = req.body;
+            var obj = req.body ;
+            delete obj._id
             Modelo.update({_id:req.params.id},{ $set: obj},function (erro, modelo) {
                 if (erro)
                     res.status(412).json({"error": erro});
